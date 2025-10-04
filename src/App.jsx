@@ -2,8 +2,7 @@ import { useState,useEffect } from 'react';
 import MovieCard  from './MovieCard';
 import './App.css'
 import SearchIcon from './search.svg'
-//key = "715c4680";
-const API_URL = 'http://www.omdbapi.com?apikey=715c4680'
+const API_URL = `https://www.omdbapi.com?apikey=${process.env.REACT_APP_OMDB_API_KEY || '715c4680'}`
 const movie1 =
 {
   "Title": 'Spiderman',
@@ -34,7 +33,9 @@ const App = () => {
       </div>
       {movies?.length>0 ?(
 <div className='container'>
-        {movies.map((movie)=><MovieCard movie={movie}/>)}
+        {movies.map((movie) => (
+          <MovieCard key={movie.imdbID} movie={movie}/>
+        ))}
 
       </div>
         ) :
