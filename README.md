@@ -19,3 +19,5 @@ MovieLand is a responsive movie search web app that allows users to discover mov
 ## 💡 What I Learned
 I learned how to work with APIs, handle asynchronous JavaScript using `fetch()`, and dynamically display data using the DOM.  
 This project improved my front-end problem-solving and API integration skills.
+## 🔗 Live Demo
+[View Project](https://https://movieland-ten-eosin.vercel.app/)
